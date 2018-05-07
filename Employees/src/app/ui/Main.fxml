@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.65" fx:controller="app.ui.MainController">
+   <children>
+      <Button fx:id="btn" layoutX="23.0" layoutY="65.0" mnemonicParsing="false" onAction="#button1Action" text="Select One File" />
+      <TableView fx:id="table" layoutX="174.0" layoutY="49.0" prefHeight="518.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="emplIdA" 		prefWidth="125.0" text="Employee ID" />
+          <TableColumn fx:id="emplIdB" 		prefWidth="125.0" text="Employee ID" />
+          <TableColumn fx:id="projectId" 	prefWidth="200.0" text="Project ID" />
+          <TableColumn fx:id="days" 		prefWidth="150.0" text="Days worked" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
