@@ -6,7 +6,7 @@ import java.text.ParseException;
 import java.util.List;
 import java.util.ResourceBundle;
 
-import app.Employees;
+import app.entities.Employees;
 import app.entities.Result;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -50,15 +50,14 @@ public class MainController implements Initializable{
 	
 	public void button1Action(ActionEvent event) throws ParseException {
 		FileChooser fc = new FileChooser();
-		fc.setInitialDirectory(new File("C:\\Users\\cgg\\git\\Employees\\Employees"));
+//		fc.setInitialDirectory(new File("C:\\Users\\cgg\\git\\Employees\\Employees"));
 		fc.getExtensionFilters().addAll(new ExtensionFilter("Text Files", "*.txt"));
 		File selectedFile = fc.showOpenDialog(null);
 		
 		if (selectedFile != null) {
-			List<String[]> rData = Employees.parseFile(selectedFile);
-			List<Result> resultList = Employees.compareEmployees(rData);
+			Employees empl = new Employees(selectedFile);
 			
-			ObservableList<Result> obsList = FXCollections.observableArrayList(resultList);
+			ObservableList<Result> obsList = FXCollections.observableArrayList(empl.getData());
 			table.setItems(obsList);
 		} else {
 			System.out.println("The file is not valid");

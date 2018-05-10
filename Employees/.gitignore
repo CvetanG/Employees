@@ -1,13 +1,11 @@
-/target/
-/bin/
-.settings/
-.loadpath
-.recommenders
-.project
 .classpath
-.metadata
+.project
+.settings/
 
-/authFile.app
-/*dataList.json
-/test.app
-/GenesisMining.xlsx
+/bin/
+/Servers/
+
+/.metadata/
+/.recommenders/
+
+/RemoteSystemsTempFiles/

@@ -71,7 +71,7 @@ public class Result {
 	public String toString() {
 		return "Employee with ID:" + emplIdA + " and employee with ID:"
 				+ emplIdB + " worked longest time together " 
-				+ timeTogether + " days  on projectsID:" 
+				+ timeTogether + " days on projectsID:" 
 				+ Arrays.toString(projectsTogether.toArray());
 	}
 	
